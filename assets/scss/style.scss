@@ -2,6 +2,7 @@
 @import 'reset';
 @import 'mixin';
 @import 'colors';
+@import 'sections/header';
 
 body {
     background-color: $back;
@@ -92,3 +93,13 @@ p {
     display: flex;
     justify-content: space-between;
 }
+
+svg {
+    fill: $black;
+    transition: 0.4s;
+    :hover {
+        transition: 0.4s;
+        fill: $main;
+    }
+}
+
