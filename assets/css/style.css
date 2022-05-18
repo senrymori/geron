@@ -6,7 +6,7 @@
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-Black.ttf");
-  font-weight: 500;
+  font-weight: 900;
 }
 @font-face {
   font-family: "Montserrat";
@@ -49,6 +49,54 @@ input[type=text] {
   border: none;
   outline: none;
   background-color: transparent;
+}
+
+header {
+  padding: 36px 0;
+  position: relative;
+}
+header .burger-menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+header .burger-menu .line {
+  height: 2px;
+  width: 18px;
+  background-color: #202020;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+header .burger-menu .line:last-child {
+  margin-bottom: 0;
+}
+header .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+header .logo h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+header .logo.active, header .logo:hover {
+  color: #EF5DA8;
+}
+header nav {
+  display: flex;
+}
+header nav a {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav a:first-child {
+  margin-right: 20px;
 }
 
 body {
@@ -164,6 +212,15 @@ p {
 .container {
   display: flex;
   justify-content: space-between;
+}
+
+svg {
+  fill: #202020;
+  transition: 0.4s;
+}
+svg :hover {
+  transition: 0.4s;
+  fill: #FF3D00;
 }
 
 /*# sourceMappingURL=style.css.map */
