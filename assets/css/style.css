@@ -45,10 +45,209 @@ li {
   padding: 0;
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
   border: none;
   outline: none;
   background-color: transparent;
+}
+
+body {
+  background-color: #F7F7F7;
+}
+
+a {
+  color: #202020;
+  transition: 0.4s;
+}
+a:hover {
+  color: #FF3D00;
+  transition: 0.4s;
+}
+
+form {
+  background-color: #FFFFFF;
+  padding: 15px 20px 25px 20px;
+  border: 1px solid #E3E3E3;
+  border-radius: 8px;
+}
+form h1 {
+  text-align: center;
+  margin-bottom: 26px;
+}
+form input {
+  margin-bottom: 13px;
+}
+
+.options {
+  border: 1px solid #E3E3E3;
+  border-radius: 6px;
+}
+
+input[type=text], input[type=password], .select {
+  margin-left: -11px;
+  width: 100%;
+  border: 1px solid #E3E3E3;
+  border-radius: 6px;
+  padding: 7px 11px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 10px;
+}
+
+input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, .select {
+  color: #808080;
+}
+
+.select {
+  cursor: pointer;
+}
+.select.active {
+  color: #202020;
+}
+
+.form-container {
+  margin: 0 11px;
+}
+
+.btn {
+  width: 100%;
+  border: 1px solid #FF3D00;
+  color: #FF3D00;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 900;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.btn.second {
+  width: 100%;
+  border: 1px solid #0085FF;
+  color: #0085FF;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 900;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.btn.second:hover {
+  background-color: #0085FF;
+  color: #FFFFFF;
+}
+.btn:hover {
+  background-color: #FF3D00;
+  color: #FFFFFF;
+}
+.btn.reverse {
+  width: 100%;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 900;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.btn.reverse:hover {
+  background-color: #FFFFFF;
+  color: #FFFFFF;
+  color: #0085FF;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Montserrat";
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+p {
+  font-size: 12px;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+p.context {
+  font-size: 10px;
+}
+
+.cover {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+.cover img, .cover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cover.rectangle {
+  width: 100%;
+  padding-top: 64.4567219153%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+svg {
+  fill: #202020;
+  transition: 0.4s;
+}
+svg :hover {
+  transition: 0.4s;
+  fill: #FF3D00;
+}
+
+.card {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+.card-content {
+  padding: 10px;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
 }
 
 header {
@@ -95,132 +294,166 @@ header nav a {
   align-items: center;
   justify-content: center;
 }
+header nav a.active svg {
+  fill: #FF3D00;
+}
 header nav a:first-child {
   margin-right: 20px;
 }
 
-body {
-  background-color: #F7F7F7;
-}
-
-form {
-  background-color: #FFFFFF;
-  padding: 15px 20px 25px 20px;
-  border: 1px solid #E3E3E3;
+.main-container {
+  width: 49%;
+  background-color: #0085FF;
   border-radius: 8px;
 }
-
-input[type=text] {
-  margin-left: -11px;
-  width: 100%;
-  border: 1px solid #E3E3E3;
-  border-radius: 6px;
-  padding: 7px 11px;
-  font-family: "Montserrat";
-  font-weight: 700;
-  font-size: 10px;
+.main-container img {
+  border-radius: 8px;
 }
-
-.form-container {
-  margin: 0 11px;
+.main-container .cover-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.btn {
-  width: 100%;
-  border: 1px solid #FF3D00;
-  color: #FF3D00;
-  border-radius: 5px;
-  padding: 10px 0;
-  font-size: 14px;
-  text-align: center;
-  font-family: "Montserrat";
-  font-weight: 900;
-  transition: 0.4s;
-  cursor: pointer;
-}
-.btn .second {
-  width: 100%;
-  border: 1px solid #0085FF;
-  color: #0085FF;
-  border-radius: 5px;
-  padding: 10px 0;
-  font-size: 14px;
-  text-align: center;
-  font-family: "Montserrat";
-  font-weight: 900;
-  transition: 0.4s;
-  cursor: pointer;
-}
-.btn .second :hover {
-  background-color: #0085FF;
+.main-container h1 {
   color: #FFFFFF;
+  margin: 35px;
 }
-.btn :hover {
-  background-color: #FF3D00;
-  color: #FFFFFF;
-}
-
-h1, h2, h3, h4 {
-  font-family: "Montserrat";
-  font-weight: 900;
+.main-container h1:last-child {
+  margin-top: 0;
 }
 
-h1 {
-  font-size: 20px;
+.cards .card {
+  width: 18.4%;
+}
+.cards .card img {
+  border-radius: 8px 8px 0px 0px;
+}
+.cards h2 {
+  margin-bottom: 15px;
+}
+.cards p {
+  margin-bottom: 8px;
 }
 
-h2 {
-  font-size: 16px;
+.main-form {
+  width: 30%;
+  margin: 0 auto;
+  margin-bottom: 80px;
 }
-
-h3 {
-  font-size: 14px;
-}
-
-h4 {
-  font-size: 12px;
-}
-
-p {
-  font-family: "Montserrat";
-  font-weight: 400;
-}
-
-.cover {
+.main-form .select {
+  display: flex;
   position: relative;
-  width: 100%;
-  padding-top: 100%;
+  margin-bottom: 26px;
 }
-.cover img {
+.main-form .select:hover .pick svg {
+  fill: #FF3D00;
+}
+.main-form .select:hover .options {
+  display: block;
+}
+.main-form .select .pick {
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: 0;
+  padding: 0 14px;
   height: 100%;
 }
-.cover .rectangle {
+.main-form .select .options {
+  display: none;
   width: 100%;
-  padding-top: 64.4567219153%;
+  background-color: #FFFFFF;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  transform: translate(0, 100%);
+}
+.main-form .select .options .opt {
+  padding: 10px 11px;
+  transition: 0.4s;
+  color: #202020;
+}
+.main-form .select .options .opt:hover {
+  background-color: #FF3D00;
+  color: white;
+  transition: 0.4s;
 }
 
-.wrapper {
-  margin: 0 auto;
-  max-width: 1100px;
-  padding: 0 10px;
+.profile {
+  background-color: #0085FF;
+  border-radius: 8px;
+  padding: 33px;
+  color: #FFFFFF;
 }
-
-.container {
+.profile-container {
+  width: 49%;
   display: flex;
   justify-content: space-between;
 }
-
-svg {
-  fill: #202020;
-  transition: 0.4s;
+.profile-container:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-svg :hover {
-  transition: 0.4s;
-  fill: #FF3D00;
+.profile-container .box:first-child {
+  width: 50%;
+}
+.profile-container .box:last-child {
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.profile-container img {
+  object-fit: cover;
+  border-radius: 12px;
+}
+.profile-container h2 {
+  margin-bottom: 4px;
+}
+.profile-container .title {
+  margin-bottom: 20px;
+}
+
+.progress h1 {
+  margin-bottom: 25px;
+}
+.progress .checkpoint {
+  width: 9%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.progress p {
+  text-align: center;
+}
+.progress svg, .progress h4 {
+  margin-bottom: 8px;
+}
+
+.page form {
+  width: 30%;
+}
+.page .btn {
+  margin-bottom: 46px;
+}
+.page p {
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+footer {
+  background-color: #202020;
+  color: #FFFFFF;
+  padding: 42px 0;
+}
+footer h2 {
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+footer .container {
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
