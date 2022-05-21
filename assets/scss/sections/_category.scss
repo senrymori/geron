@@ -1,0 +1,58 @@
+.category {
+    .container {
+        .item {
+            width: 32%;
+            .cover-container {
+                background-color: rgba($color: #000000, $alpha: 0.5);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $white;
+                text-transform: uppercase;
+
+                &:hover {
+                    background: $main;
+                    transition: 0.7s;
+                    cursor: pointer;
+                }
+            }
+
+            .first {
+                @include backIMG(url('../img/category/cat_clother_4.jpg'));
+            }
+            .second {
+                @include backIMG(url('../img/category/cat_clother_2.jpg'))
+            }
+            .three {
+                @include backIMG(url('../img/category/cat_clother_1.jpg'))
+            }
+            .four {
+                @include backIMG(url('../img/category/cat_clother_3.jpg'))
+            }
+            .five {
+                @include backIMG(url('../img/category/cat_clother_5.jpg'))
+            }
+
+            
+        }
+
+        &:first-child {
+            margin-bottom: 2%;
+            .item:first-child {
+                width: 66%;
+                .cover {
+                    padding-top: 48.5%;
+                }
+            }
+        }
+    }
+
+    .wrapper {
+        width: 60%;
+    }
+}

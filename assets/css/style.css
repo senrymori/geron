@@ -56,6 +56,9 @@ body {
 }
 
 a {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 14px;
   color: #202020;
   transition: 0.4s;
 }
@@ -203,6 +206,7 @@ p.context {
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 .cover.rectangle {
   width: 100%;
@@ -224,7 +228,7 @@ svg {
   fill: #202020;
   transition: 0.4s;
 }
-svg :hover {
+svg:hover {
   transition: 0.4s;
   fill: #FF3D00;
 }
@@ -248,6 +252,184 @@ section {
   justify-content: center;
   align-items: center;
   margin-bottom: 0;
+}
+
+header {
+  padding: 20px 0;
+}
+header .container {
+  align-items: center;
+}
+header .logo {
+  font-family: "Montserrat";
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: baseline;
+}
+header .logo .ellipse.active {
+  width: 5px;
+  height: 5px;
+  background-color: #FF3D00;
+  border-radius: 10px;
+}
+header .navigate {
+  display: flex;
+  align-items: center;
+}
+header .navigate svg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+header .navigate svg:first-child {
+  margin: 0 20px;
+}
+header .navigate .nav-links {
+  padding: 10px 0;
+  border-right: 1px solid #E3E3E3;
+}
+header .navigate .nav-links a {
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.main {
+  background-color: #FF3D00;
+  color: #FFFFFF;
+  padding-top: 30%;
+  position: relative;
+}
+.main .container {
+  height: 100%;
+}
+.main .container .info {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.main .container .info h1 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+.main .container .info .btn:hover {
+  color: #202020;
+}
+.main .container .pic {
+  width: 50%;
+}
+.main .container .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+.main-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.main .wrapper {
+  height: 100%;
+}
+
+.category .container .item {
+  width: 32%;
+}
+.category .container .item .cover-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.category .container .item .cover-container:hover {
+  background: #FF3D00;
+  transition: 0.7s;
+  cursor: pointer;
+}
+.category .container .item .first {
+  background: url("../img/category/cat_clother_4.jpg");
+  background-size: 100% 100%;
+  background-color: #202020;
+}
+.category .container .item .second {
+  background: url("../img/category/cat_clother_2.jpg");
+  background-size: 100% 100%;
+  background-color: #202020;
+}
+.category .container .item .three {
+  background: url("../img/category/cat_clother_1.jpg");
+  background-size: 100% 100%;
+  background-color: #202020;
+}
+.category .container .item .four {
+  background: url("../img/category/cat_clother_3.jpg");
+  background-size: 100% 100%;
+  background-color: #202020;
+}
+.category .container .item .five {
+  background: url("../img/category/cat_clother_5.jpg");
+  background-size: 100% 100%;
+  background-color: #202020;
+}
+.category .container:first-child {
+  margin-bottom: 2%;
+}
+.category .container:first-child .item:first-child {
+  width: 66%;
+}
+.category .container:first-child .item:first-child .cover {
+  padding-top: 48.5%;
+}
+.category .wrapper {
+  width: 60%;
+}
+
+.cards .container {
+  flex-wrap: wrap;
+}
+.cards .card {
+  width: 32%;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+.cards .cover {
+  background-color: #E3E3E3;
+}
+.cards .cover img {
+  z-index: 150;
+}
+.cards .cover .ellipse {
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  border-radius: 100%;
+  background-color: #FFFFFF;
+}
+.cards h2 {
+  margin: 20px 0;
+  text-align: center;
+}
+.cards p {
+  font-size: 18px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
