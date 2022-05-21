@@ -1,0 +1,36 @@
+section.description {
+    padding: 40px 0;
+    border: 1px solid $stroke;
+    border-radius: 5px;
+    
+    .desc-container {
+        width: 60%;
+        margin: 0 auto;
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+
+            .tab {
+                cursor: pointer;
+                transition: 0.4s;
+                &:hover, &.active {
+                    color: $main;
+                    transition: 0.4s;
+                }
+            }
+        }
+
+        .content {
+            .tab-content {
+                display: none;
+                text-align: center;
+
+                &.active {
+                    margin-top: 20px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
