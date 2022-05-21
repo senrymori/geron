@@ -8,6 +8,8 @@ body {
 }
 
 a {
+    @include font(700);
+    font-size: 14px;
     color: $black;
     transition: 0.4s;
 
@@ -125,6 +127,7 @@ p {
         left: 0;
         width: 100%;
         height: 100%;
+        object-fit: contain;
     }
 
     &.rectangle {
@@ -146,7 +149,7 @@ p {
 svg {
     fill: $black;
     transition: 0.4s;
-    :hover {
+    &:hover {
         transition: 0.4s;
         fill: $main;
     }
@@ -172,3 +175,10 @@ section {
     align-items: center;
     margin-bottom: 0;
 }
+
+@import 'sections/header';
+@import 'sections/main';
+@import 'sections/orders';
+@import 'sections/category';
+@import 'sections/cards';
+@import 'sections/footer';
