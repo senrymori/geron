@@ -176,6 +176,84 @@ section {
     margin-bottom: 0;
 }
 
+.counter {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    border: 1px solid $stroke;
+    border-radius: 5px;
+
+    .item {
+        padding: 10px;
+        
+        &.count {
+            transition: 0.4s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $main;
+                color: $white;
+                transition: 0.4s;
+
+                &:first-child {
+                  border-radius: 5px 0 0 5px;
+                }
+                &:last-child {
+                    border-radius: 0 5px 5px 0;
+                }
+            }
+        }
+    }
+}
+
+.ellipse-container {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .ellipse {
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background-color: $second;
+        transition: 0.4s;
+
+        &.active {
+            transition: 0.4s;
+            width: 10px;
+            height: 10px;
+            border: 5px solid  $white;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        cursor: pointer;   
+        &.black {
+            background-color: $black;
+        }
+        &.pink {
+            background-color: $logo;
+        }
+        &.main {
+            background-color: $main;
+            padding: 0;
+        }
+        &.second {
+            background-color: $second;
+        }
+    }
+}
+
+.checkbox {
+    width: 15px;
+    height: 15px;
+    border: 1px solid $main;
+    margin-right: 15px;
+    border-radius: 4px;
+}
+
 @import 'sections/header';
 @import 'sections/main';
 @import 'sections/orders';
@@ -183,5 +261,11 @@ section {
 @import 'sections/cards';
 @import 'sections/footer';
 
+@import 'page-title';
+@import 'pay';
+@import 'total';
+
 @import 'sections/product/product';
 @import 'sections/product/description';
+
+@import 'sections/basket/basket';
