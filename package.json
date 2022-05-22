@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "node-sass": "sass -w assets/scss/:assets/css/"
+    "node-sass": "sass -w assets/scss/:assets/css/",
+    "server": "node server-start.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "4.18.1",
     "node-sass": "7.0.1"
   }
 }
