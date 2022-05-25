@@ -1,30 +1,30 @@
 const pages = [
   {
-    url: './base/components/header.html',
+    url: '../base/components/header.html',
     include: 'header'
   },
   {
-    url: './pages/main/main.html',
+    url: './main/main.html',
     include: '.include-main'
   },
   {
-    url: './pages/main/category.html',
+    url: './main/category.html',
     include: '.include-cat'
   },
   {
-    url: './base/components/cards.html',
+    url: '../base/components/cards.html',
     include: '.include-cards'
   },
   {
-    url: './pages/product/product.html',
+    url: './product/product.html',
     include: '.include-product'
   },
   {
-    url: './pages/basket/basket.html',
+    url: './basket/basket.html',
     include: '.include-basket'
   },
   {
-    url: './pages/pay/pay.html',
+    url: './pay/pay.html',
     include: '.include-pay'
   },
 ]
@@ -35,13 +35,21 @@ pages.forEach(item => {
     return response.text()
   })
   .then(data => {
-    if(item.include === '.include-cards') {
-      const includeCards = document.querySelector(item.include)
-      includeCards.innerHTML = data;
+    const include = document.querySelector(item.include)
+    switch(item.include) {
+      case '.include-cards':        
+        include.innerHTML = data;
 
-      setCards(includeCards.querySelector('.cards .container'))
-    } else {
-      document.querySelector(item.include).innerHTML = data;
-    }    
+        setCards(include.querySelector('.cards .container'))
+        break;
+      case '.include-pay':
+        include.innerHTML = data;
+
+        setCheckbox(include.querySelectorAll('input[type="checkbox"]'))
+        break;
+      default:
+        include.innerHTML = data;
+        break;
+    }   
   });
 })

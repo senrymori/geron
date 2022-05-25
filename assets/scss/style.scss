@@ -248,11 +248,47 @@ section {
 }
 
 .checkbox {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     border: 1px solid $main;
     margin-right: 15px;
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+
+    &.active {
+        background-color: $main;
+        transition: 0.4s;
+
+        .ellipse {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: $white;
+        }
+    }
+}
+
+.login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.auth {
+    width: 30%;
+    margin: 0 auto;
+
+    .btn {
+        padding: 10px 0;
+    }
+
+    p {
+        text-align: center
+    }
 }
 
 @import 'sections/header';

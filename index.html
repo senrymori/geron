@@ -8,39 +8,33 @@
     <title>Main</title>
 </head>
 <body>
-    <div class="wrapper">
-        <header></header>
-    </div>
+    <div class="login">
+        <div class="auth">
+            <form id="auth">
+                <h1>Авторизация</h1>
+                <div class="form-container">
+                    <label for="">
+                        <h4>Е-mail</h4>
+                        <input type="text" name="email">
+                    </label>
+                    <label for="">
+                        <h4>Phone</h4>
+                        <input type="text" name="phone">
+                    </label>
+                    <label for="">
+                        <h4>Password</h4>
+                        <input type="password" name="password">
+                    </label>
+                </div>
+                <input type="button" onclick="login()" value="Войти" class="btn">
 
-    <div class="fullpage main open">
-        <div class="include-main"></div>
+                <a>
+                    <p>Регистрация</p>
+                </a>
+            </form>
+        </div> 
+    </div> 
     
-        <div class="include-cat"></div>
-    
-        <div class="wrapper">
-            <div class="include-cards"></div>
-        </div>
-    </div>
-
-    <div class="fullpage product">
-        <div class="include-product"></div>
-
-        <div class="wrapper">
-            <div class="include-cards"></div>
-        </div>   
-    </div>
-
-    <div class="fullpage basket">
-        <div class="include-basket"></div>
-    </div>
-
-    <div class="fullpage pay">
-        <div class="include-pay"></div>
-    </div>
-    
-    
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/settings/spa-setting.js"></script>
-    <script src="./assets/js/settings/settings.js"></script>    
+    <script src="./assets/js/auth.js"></script>
 </body>
 </html>

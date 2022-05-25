@@ -36,3 +36,15 @@ const setCountProduct = (type) => {
 const keyPress = (e) => {
     console.log(e.value)
 }
+
+const setCheckbox = (e) => {
+    e.forEach(item => {
+        if(item.checked) {
+            item.parentNode.querySelector('.checkbox').classList.add('active')
+        }
+    })
+}
+
+const changeCheckbox = (e) => {    
+    e.parentNode.querySelector('.checkbox').classList.toggle('active')
+}
