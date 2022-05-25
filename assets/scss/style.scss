@@ -12,6 +12,7 @@ a {
     font-size: 14px;
     color: $black;
     transition: 0.4s;
+    cursor: pointer;
 
     &:hover {
         color: $main;
@@ -262,6 +263,7 @@ section {
 @import 'sections/footer';
 
 @import 'page-title';
+@import 'open-pages';
 @import 'pay';
 @import 'total';
 

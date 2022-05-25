@@ -1,31 +1,47 @@
-  fetch("./base/components/header.html")
-  .then(response => {
-    return response.text()
-  })
-  .then(data => {
-    document.querySelector("header").innerHTML = data;
-  });
+const pages = [
+  {
+    url: './base/components/header.html',
+    include: 'header'
+  },
+  {
+    url: './pages/main/main.html',
+    include: '.include-main'
+  },
+  {
+    url: './pages/main/category.html',
+    include: '.include-cat'
+  },
+  {
+    url: './base/components/cards.html',
+    include: '.include-cards'
+  },
+  {
+    url: './pages/product/product.html',
+    include: '.include-product'
+  },
+  {
+    url: './pages/basket/basket.html',
+    include: '.include-basket'
+  },
+  {
+    url: './pages/pay/pay.html',
+    include: '.include-pay'
+  },
+]
 
-  fetch("./pages/main/main.html")
+pages.forEach(item => {
+  fetch(item.url)
   .then(response => {
     return response.text()
   })
   .then(data => {
-    document.querySelector(".include-main").innerHTML = data;
-  });
+    if(item.include === '.include-cards') {
+      const includeCards = document.querySelector(item.include)
+      includeCards.innerHTML = data;
 
-  fetch("./pages/main/category.html")
-  .then(response => {
-    return response.text()
-  })
-  .then(data => {
-    document.querySelector(".include-cat").innerHTML = data;
+      setCards(includeCards.querySelector('.cards .container'))
+    } else {
+      document.querySelector(item.include).innerHTML = data;
+    }    
   });
-
-  fetch("./base/components/cards.html")
-  .then(response => {
-    return response.text()
-  })
-  .then(data => {
-    document.querySelector(".include-cards").innerHTML = data;
-  });
+})

@@ -16,24 +16,24 @@ const data = [
         title: 'Kurtka! Winter Collect.',
         url: '../assets/img/kurtka.png',
         price: '1000'
-    }
+    },
 ]
 
-const cardsContainer = document.querySelector('.cards .container');
+const setCards = (cardsContainer) => {
+    let cards = '';
+    data.forEach(item => {
+        let htmlObject = `
+            <a onclick="navigation('product')" class="card" data-price="${item.price}" data-color="black">
+                <div class="cover">
+                    <img src="${item.url}" alt="">
+                    <div class="ellipse"></div>
+                </div>
+                <h2>${item.title}</h2>
+                <p>$${item.price}</p>
+            </a>
+        `
+        cards += htmlObject;       
+    });
+    cardsContainer.innerHTML = cards;  
+}
 
-data.forEach(item => {
-    let htmlObject = document.createElement('a');
-
-    htmlObject.innerHTML = `
-    <div class="cover">
-        <img src="${item.url}" alt="">
-        <div class="ellipse"></div>
-    </div>
-    <h2>${item.title}</h2>
-    <p>$${item.price}</p>
-    `;
-    htmlObject.setAttribute('href', './pages/product.html')
-    htmlObject.classList.add('card')
-
-    cardsContainer.appendChild(htmlObject);
-});

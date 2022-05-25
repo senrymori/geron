@@ -61,6 +61,7 @@ a {
   font-size: 14px;
   color: #202020;
   transition: 0.4s;
+  cursor: pointer;
 }
 a:hover {
   color: #FF3D00;
@@ -525,6 +526,13 @@ header .navigate .nav-links a {
   margin: 0 10px;
   font-family: "Montserrat";
   font-weight: 700;
+}
+
+.fullpage {
+  display: none;
+}
+.fullpage.open {
+  display: inline;
 }
 
 form.order {
