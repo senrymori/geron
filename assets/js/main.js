@@ -1,9 +1,3 @@
-const sortCard = () => {
-    let test = data.sort((a, b) => {
-        return b.price - a.price
-    })
-}
-
 const navigation = (pageOpen) => {
     const pages = document.querySelectorAll('.fullpage');
 
@@ -18,6 +12,8 @@ const navigation = (pageOpen) => {
     })
 }
 
+
+// SETTERS
 const setCountProduct = (type) => {
     const count = document.getElementById('quality');
     let value = parseInt(count.innerHTML);
@@ -33,16 +29,36 @@ const setCountProduct = (type) => {
     count.innerHTML = value;
 }
 
-const keyPress = (e) => {
-    console.log(e.value)
-}
-
 const setCheckbox = (e) => {
     e.forEach(item => {
         if(item.checked) {
             item.parentNode.querySelector('.checkbox').classList.add('active')
         }
     })
+}
+
+
+// CHANGE
+const sortCard = (typeSort) => {
+    const cards = [];
+    cards.push(...data);
+
+    switch(typeSort) {
+        case 'UP': 
+            cards.sort((a, b) => {            
+                return a.price - b.price;            
+            })
+            break;
+        case 'DOWN': 
+            cards.sort((a, b) => {            
+                return b.price - a.price
+            }) 
+            break;
+        default: 
+            break;
+    }
+
+    setCards(document.querySelector('.cards .container'), cards)
 }
 
 const changeCheckbox = (e) => {    
@@ -55,4 +71,20 @@ const pickColor = (e) => {
         item.querySelector('.ellipse').classList.remove('active')
     })
     e.classList.toggle('active')
+}
+
+
+// MODAL
+
+const modal = (open) => {
+    const modal = document.getElementById('modal');
+    
+    if(open) {
+        modal.style.display = 'flex';
+    } else {
+        modal.style.animationName = 'closeModal'
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 400);
+    }
 }

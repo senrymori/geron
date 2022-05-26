@@ -19,21 +19,38 @@ const data = [
     },
 ]
 
-const setCards = (cardsContainer) => {
+const setCards = (cardsContainer, dataSort) => {
     let cards = '';
-    data.forEach(item => {
-        let htmlObject = `
-            <a onclick="navigation('product')" class="card" data-price="${item.price}" data-color="black">
-                <div class="cover">
-                    <img src="${item.url}" alt="">
-                    <div class="ellipse"></div>
-                </div>
-                <h2>${item.title}</h2>
-                <p>$${item.price}</p>
-            </a>
-        `
-        cards += htmlObject;       
-    });
+    
+    if(dataSort) {
+        dataSort.forEach(item => {
+            let htmlObject = `
+                <a onclick="navigation('product')" class="card" data-price="${item.price}" data-color="black">
+                    <div class="cover">
+                        <img src="${item.url}" alt="">
+                        <div class="ellipse"></div>
+                    </div>
+                    <h2>${item.title}</h2>
+                    <p>$${item.price}</p>
+                </a>
+            `
+            cards += htmlObject;       
+        });
+    } else {
+        data.forEach(item => {
+            let htmlObject = `
+                <a onclick="navigation('product')" class="card" data-price="${item.price}" data-color="black">
+                    <div class="cover">
+                        <img src="${item.url}" alt="">
+                        <div class="ellipse"></div>
+                    </div>
+                    <h2>${item.title}</h2>
+                    <p>$${item.price}</p>
+                </a>
+            `
+            cards += htmlObject;       
+        });
+    }
     cardsContainer.innerHTML = cards;  
 }
 

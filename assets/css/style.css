@@ -39,7 +39,7 @@ li {
   margin: 0;
 }
 
-.btn, input[type=button] {
+.btn, input[type=button], button {
   border: none;
   background-color: transparent;
   padding: 0;
@@ -113,7 +113,7 @@ input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, .sel
   margin: 0 11px;
 }
 
-.btn {
+.btn, input[type=button] {
   width: 100%;
   border: 1px solid #FF3D00;
   color: #FF3D00;
@@ -126,7 +126,7 @@ input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, .sel
   transition: 0.4s;
   cursor: pointer;
 }
-.btn.second {
+.btn.second, input[type=button].second {
   width: 100%;
   border: 1px solid #0085FF;
   color: #0085FF;
@@ -139,15 +139,32 @@ input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, .sel
   transition: 0.4s;
   cursor: pointer;
 }
-.btn.second:hover {
+.btn.second:hover, input[type=button].second:hover {
   background-color: #0085FF;
   color: #FFFFFF;
 }
-.btn:hover {
+.btn:hover, input[type=button]:hover {
   background-color: #FF3D00;
   color: #FFFFFF;
 }
-.btn.reverse {
+.btn.close, input[type=button].close {
+  width: 100%;
+  border: 1px solid #808080;
+  color: #808080;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 900;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.btn.close:hover, input[type=button].close:hover {
+  background-color: #808080;
+  color: #FFFFFF;
+}
+.btn.reverse, input[type=button].reverse {
   width: 100%;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
@@ -160,7 +177,7 @@ input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, .sel
   transition: 0.4s;
   cursor: pointer;
 }
-.btn.reverse:hover {
+.btn.reverse:hover, input[type=button].reverse:hover {
   background-color: #FFFFFF;
   color: #FFFFFF;
   color: #0085FF;
@@ -636,6 +653,70 @@ form.order .location label {
 .total .pay-container-btn {
   display: flex;
   justify-content: flex-end;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  animation-fill-mode: forwards;
+  animation-name: openModal;
+  animation-duration: 0.4s;
+}
+.modal-container {
+  padding: 20px 10px;
+  border-radius: 10px;
+  width: 30%;
+  background-color: #FFFFFF;
+}
+.modal-container h1, .modal-container p {
+  margin-bottom: 20px;
+}
+.modal-container .btn, .modal-container input[type=button] {
+  padding: 10px 0;
+  width: 48%;
+}
+.modal-container .modal-close {
+  height: fit-content;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.modal-container .modal-close:hover {
+  color: #FF3D00;
+  transition: 0.4s;
+}
+
+@keyframes openModal {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes closeModal {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+.sort.container {
+  width: 50%;
+  margin-bottom: 20px;
+}
+.sort.container .btn {
+  width: 32%;
 }
 
 .product .cover {

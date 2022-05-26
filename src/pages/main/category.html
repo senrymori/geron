@@ -1,7 +1,7 @@
 <section class="category">
     <div class="wrapper">
         <div class="container">
-            <div class="item">
+            <div class="item" onclick="modal(true)">
                 <div class="cover first rectangle">
                     <div class="cover-container">
                         <h2>Man</h2>
@@ -9,7 +9,7 @@
                     
                 </div>
             </div>
-            <div class="item">
+            <div class="item" onclick="modal(true)">
                 <div class="cover second">
                     <div class="cover-container">
                         <h2>Woman</h2>
@@ -18,28 +18,37 @@
             </div>
         </div>
         <div class="container">
-            <div class="item">
+            <div class="item" onclick="modal(true)">
                 <div class="cover three">
                     <div class="cover-container">
                         <h2>Fashion</h2>
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" onclick="modal(true)">
                 <div class="cover four">
                     <div class="cover-container">
                         <h2>Sneaker</h2>
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" onclick="modal(true)">
                 <div class="cover five">
                     <div class="cover-container">
                         <h2>T-Shirt</h2>
                     </div>
                 </div>
             </div>
+        </div>        
+    </div>    
+</section>
+
+<div class="sort">
+    <div class="wrapper">
+        <div class="sort container">
+            <input type="button" onclick="sortCard('UP')" value="По убыванию" class="btn">
+            <input type="button" onclick="sortCard('DOWN')" value="По возрастанию" class="btn">
+            <input type="button" onclick="sortCard()" value="По умолчанию" class="btn">
         </div>
     </div>
-    
-</section>
+</div>

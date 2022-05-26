@@ -67,7 +67,7 @@ input[type="text"]:placeholder-shown, input[type="password"]:placeholder-shown, 
  margin: 0 11px;
 }
 
-.btn {
+.btn, input[type="button"] {
     @include btn($main);
 
     &.second {
@@ -80,6 +80,14 @@ input[type="text"]:placeholder-shown, input[type="password"]:placeholder-shown, 
 
     &:hover {
         @include activeBtn($main)
+    }
+
+    &.close {
+        @include btn($placeholder);
+
+        &:hover {
+            @include activeBtn($placeholder)
+        }
     }
 
     &.reverse {
@@ -312,6 +320,8 @@ section {
 @import 'open-pages';
 @import 'pay';
 @import 'total';
+@import 'modal';
+@import 'sort';
 
 @import 'sections/product/product';
 @import 'sections/product/description';
