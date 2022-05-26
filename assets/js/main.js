@@ -48,3 +48,11 @@ const setCheckbox = (e) => {
 const changeCheckbox = (e) => {    
     e.parentNode.querySelector('.checkbox').classList.toggle('active')
 }
+
+const pickColor = (e) => {
+    const container = document.querySelectorAll('.ellipse-container')
+    container.forEach(item => {
+        item.querySelector('.ellipse').classList.remove('active')
+    })
+    e.classList.toggle('active')
+}

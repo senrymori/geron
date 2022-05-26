@@ -277,6 +277,14 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    form {
+        display: none;
+
+        &.open {
+            display: block;
+        }
+    }
 }
 .auth {
     width: 30%;
@@ -290,6 +298,8 @@ section {
         text-align: center
     }
 }
+
+
 
 @import 'sections/header';
 @import 'sections/main';

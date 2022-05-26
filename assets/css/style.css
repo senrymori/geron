@@ -347,6 +347,12 @@ section {
   justify-content: center;
   align-items: center;
 }
+.login form {
+  display: none;
+}
+.login form.open {
+  display: block;
+}
 
 .auth {
   width: 30%;
@@ -697,7 +703,7 @@ form.order .location label {
   transition: 0.4s;
   cursor: pointer;
 }
-.product-container.info .detail .characteristics .ellipse-container .ellipse.active {
+.product-container.info .detail .characteristics .ellipse-container .ellipse:hover, .product-container.info .detail .characteristics .ellipse-container .ellipse.active {
   transition: 0.4s;
   width: 10px;
   height: 10px;
