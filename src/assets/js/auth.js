@@ -34,7 +34,7 @@ const login = () => {
         if (item.email === userEmail && 
             item.phone === userPhoneMask.unmaskedValue && 
             item.password === userPassword) {
-                window.location = '/pages/app.html'
+                window.location = 'src/pages/app.html'
         }
     })
 }

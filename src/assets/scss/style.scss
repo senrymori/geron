@@ -196,6 +196,8 @@ section {
         padding: 10px;
         
         &.count {
+            border: none;
+            color: $placeholder;
             transition: 0.4s;
             cursor: pointer;
 

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "node-sass": "sass -w assets/scss/:assets/css/",
+    "node-sass": "sass -w src/assets/scss/:src/assets/css/",
     "server": "node server-start.js"
   },
   "keywords": [],

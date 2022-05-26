@@ -283,6 +283,8 @@ section {
   padding: 10px;
 }
 .counter .item.count {
+  border: none;
+  color: #808080;
   transition: 0.4s;
   cursor: pointer;
 }
@@ -394,6 +396,8 @@ header .logo {
   text-transform: uppercase;
   display: flex;
   align-items: baseline;
+  cursor: pointer;
+  user-select: none;
 }
 header .logo .ellipse.active {
   width: 5px;

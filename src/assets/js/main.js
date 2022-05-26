@@ -85,6 +85,7 @@ const modal = (open) => {
         modal.style.animationName = 'closeModal'
         setTimeout(() => {
             modal.style.display = 'none';
+            modal.style.animationName = 'openModal';
         }, 400);
     }
 }

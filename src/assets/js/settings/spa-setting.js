@@ -1,6 +1,6 @@
 const pages = [
   {
-    url: '../base/components/header.html',
+    url: '../../base/components/header.html',
     include: 'header'
   },
   {
@@ -12,7 +12,7 @@ const pages = [
     include: '.include-cat'
   },
   {
-    url: '../base/components/cards.html',
+    url: '../../base/components/cards.html',
     include: '.include-cards'
   },
   {

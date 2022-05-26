@@ -8,6 +8,8 @@ header {
         text-transform: uppercase;
         display: flex;
         align-items: baseline;
+        cursor: pointer;
+        user-select: none;   
 
         .ellipse.active {
             width: 5px;
