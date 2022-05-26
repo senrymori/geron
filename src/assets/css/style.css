@@ -930,4 +930,53 @@ section.description .desc-container .content .tab-content.active {
   align-items: center;
 }
 
+.admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.admin .btn.second {
+  width: 73%;
+  margin: 20px 0;
+}
+.admin .panel-add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  padding: 10px;
+  border: 2px solid #E3E3E3;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+.admin .panel-add h3 {
+  margin-bottom: 10px;
+}
+.admin .panel-add .container {
+  align-items: center;
+  width: 70%;
+  margin-bottom: 20px;
+}
+.admin .panel-add .add {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #E3E3E3;
+  transition: 0.4s;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 20px;
+}
+.admin .panel-add .add:hover {
+  transition: 0.4s;
+  background-color: #FF3D00;
+  color: #FFFFFF;
+}
+.admin .panel-add h1 {
+  margin-bottom: 10px;
+}
+.admin .panel-add:first-child {
+  margin-top: 30px;
+}
+
 /*# sourceMappingURL=style.css.map */

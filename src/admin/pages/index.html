@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <div class="wrapper admin">
+        <input type="button" value="Перейти на сайт" class="btn second">
+        <div class="panel-add title">
+            <h1>Заголовок</h1>
+            <div class="container">
+                <input type="text" name="title">                
+                <h4 class="add save" onclick="saveTitle(this)">Сохранить</h4>
+            </div>
+        </div>
+
+        <div class="panel-add links">
+            <h1>Ссылки</h1>
+            <div class="container">
+                <input type="text">
+                <h4 class="add" onclick="addLink(this)">+</h4>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="../../assets/js/data.js"></script>
+    <script src="../../assets/js/admin/main.js"></script>
+</body>
+</html>

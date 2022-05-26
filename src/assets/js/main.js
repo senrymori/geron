@@ -89,3 +89,9 @@ const modal = (open) => {
         }, 400);
     }
 }
+
+// GETTERS
+
+const getLinks = () => {
+    console.log(links)
+}
