@@ -1,26 +1,5 @@
-const data = [
-    {
-        id: '1',
-        title: 'T-Shirt! Summer Collect.',
-        url: '../assets/img/tshirt.png',
-        price: '1500'
-    },
-    {
-        id: '3',
-        title: 'Jeans! Summer Collect.',
-        url: '../assets/img/jeans.png',
-        price: '2500'
-    },
-    {
-        id: '6',
-        title: 'Kurtka! Winter Collect.',
-        url: '../assets/img/kurtka.png',
-        price: '1000'
-    },
-]
-
 const setCards = (cardsContainer, dataSort) => {
-    let cards = '';
+    let tempCards = '';
     
     if(dataSort) {
         dataSort.forEach(item => {
@@ -34,10 +13,10 @@ const setCards = (cardsContainer, dataSort) => {
                     <p>$${item.price}</p>
                 </a>
             `
-            cards += htmlObject;       
+            tempCards += htmlObject;       
         });
     } else {
-        data.forEach(item => {
+        cards.forEach(item => {
             let htmlObject = `
                 <a onclick="navigation('product')" class="card" data-price="${item.price}" data-color="black">
                     <div class="cover">
@@ -48,9 +27,9 @@ const setCards = (cardsContainer, dataSort) => {
                     <p>$${item.price}</p>
                 </a>
             `
-            cards += htmlObject;       
+            tempCards += htmlObject;       
         });
     }
-    cardsContainer.innerHTML = cards;  
+    cardsContainer.innerHTML = tempCards;  
 }
 

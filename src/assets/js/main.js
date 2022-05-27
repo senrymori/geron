@@ -40,17 +40,17 @@ const setCheckbox = (e) => {
 
 // CHANGE
 const sortCard = (typeSort) => {
-    const cards = [];
-    cards.push(...data);
+    const tempCards = [];
+    tempCards.push(...cards);
 
     switch(typeSort) {
         case 'UP': 
-            cards.sort((a, b) => {            
+            tempCards.sort((a, b) => {            
                 return a.price - b.price;            
             })
             break;
         case 'DOWN': 
-            cards.sort((a, b) => {            
+            tempCards.sort((a, b) => {            
                 return b.price - a.price
             }) 
             break;
@@ -58,7 +58,7 @@ const sortCard = (typeSort) => {
             break;
     }
 
-    setCards(document.querySelector('.cards .container'), cards)
+    setCards(document.querySelector('.cards .container'), tempCards)
 }
 
 const changeCheckbox = (e) => {    
@@ -87,6 +87,25 @@ const modal = (open) => {
             modal.style.display = 'none';
             modal.style.animationName = 'openModal';
         }, 400);
+    }
+}
+
+const burger = (open) => {
+    const burger = document.querySelector('.nav-links');
+    
+
+    if(open) {
+        burger.dataset.statusBurger = true;
+        burger.classList.add('mobile');
+    } else {
+        if(burger.dataset.statusBurger) {
+            burger.style.animationName = 'closeBurger'
+            setTimeout(() => {
+                burger.classList.remove('mobile')
+                burger.dataset.statusBurger = '';
+                burger.style.animationName = 'openBurger';
+            }, 800);
+        }        
     }
 }
 

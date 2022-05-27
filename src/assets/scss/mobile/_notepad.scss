@@ -1,0 +1,123 @@
+@media only screen and (max-width: 1000px) {
+    .product-container.info .card .buttons-container {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    //main
+    .main .container .info {
+        width: 50%;
+        margin-bottom: 0;
+        h1 {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }        
+    }
+    .sort.container {
+        width: 100%;
+    }
+    .category .wrapper {
+        width: 90%;
+    }
+    .nav-links {
+        display: none;
+        z-index: 500;
+        background-color: $second;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        animation-name: openBurger;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+        &.mobile {
+            display: flex;
+        }
+        
+        a {
+            padding: 10px 0;
+            color: $white;
+        }
+
+        @keyframes openBurger {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        @keyframes closeBurger {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    }
+    header {
+        .container {
+            position: relative;
+        }
+        .burger-menu {
+            display: block;
+            cursor: pointer;
+
+            .line {
+                height: 2px;
+                width: 20px;
+                background-color: $black;
+                margin-bottom: 3px;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        .logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    //product
+    .container .detail {
+        flex-direction: column;
+
+        .characteristics {
+            margin-bottom: 10px;
+        }
+    }
+
+    .product-container.info .card .buttons-container {
+        flex-direction: column;
+        width: 100%;
+
+        .button-box {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+    section.description .desc-container .container {
+        width: 100%;
+    }
+
+    // BASKET
+    .total-container {
+        width: 100%;
+    }
+
+    .total .card {
+        width: 80%;
+    }
+    .total-container {
+        align-items: center;
+    }
+}
